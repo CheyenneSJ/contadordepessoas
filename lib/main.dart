@@ -50,19 +50,25 @@ class _HomepageState extends State<Homepage> {
         decoration: const BoxDecoration(
             color: Colors.black38,
             image: DecorationImage(
-              colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken),
+              colorFilter: ColorFilter.mode(Colors.black26, BlendMode.darken),
               image: AssetImage('assets/images/image1.jpg'),
               fit: BoxFit.fill,
             )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              isFull ? 'Lotado' : 'Pode entrar!',
-              style: TextStyle(
-                fontSize: 40,
-                color: isFull ? Colors.red : Colors.white,
-                fontWeight: FontWeight.w800,
+            Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.grey.withOpacity(0.6)),
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                isFull ? 'Lotado' : 'Pode entrar!',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: isFull ? Colors.red : Colors.white,
+                  fontWeight: FontWeight.w800,
+                ),
               ),
             ),
             Padding(
